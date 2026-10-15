@@ -1,37 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body{
     font-family: serif;
     background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-.container{
-    width: 550px;
-    height: 330px;
-    border: 2px solid gray;
+/*bezel lama*/
+.form-container{
+    background-color: #e0e0e0;
     padding: 25px;
     margin: 20px;
-    border: 3px solid grey;
+    border: 2px solid;
+    border-color: #fff #888 #888 #fff;
+    width: 450px;
 }
+/* css grid utuk layour*/
 .form-group{
-    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    align-items: start;
+    margin-bottom: 15px;
 }
-label{
-    display: inline-block;
-    width: 90px;
-    font-size: 18px;
+
+.form-group label{
+    text-align: left;
+    margin-top: 3px;
 }
-input{
-    width: 400px;
-    padding: 3px;
-    font-size: 16px;
-}
+
+/*Style dasar untuk input dan textarea*/
+input[type="text"], input[type="email"],
 textarea{
-    width: 350px;
-    height: 120px;
-    vertical-align: top;
-    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 4px;
+    border: 2px solid;
+    border-color: #888 #fff #fff #888;
+    background-color: #fff;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+textarea{
     resize: none;
+    -ms-overflow-style: scroll;
+}
+
+#name {width: 80%;}
+#email {width: 90%;}
+#postcode {width: 60%;}
+
+::placeholder{
+    font-family: monospace;
+    color: #333;
 }
